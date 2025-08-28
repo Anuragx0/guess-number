@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Guess Game</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Orbitron", sans-serif;
+      background: radial-gradient(circle at top, #0f172a, #020617);
+      color: #fff;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(from 180deg, #3b82f6, #9333ea, #f43f5e, #3b82f6);
+      animation: rotate 12s linear infinite;
+      z-index: -1;
+      filter: blur(200px);
+    }
+    @keyframes rotate {
+      100% { transform: rotate(360deg); }
+    }
+
+    .game-card {
+      background: rgba(17, 25, 40, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 40px 30px;
+      width: 400px;
+      text-align: center;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 0 25px rgba(0,0,0,0.5);
+      animation: fadeUp 1s ease;
+    }
+
+    .game-card h1 {
+      font-size: 28px;
+      margin-bottom: 25px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #38bdf8;
+      text-shadow: 0 0 10px #38bdf8;
+    }
+
+    
+
+    /* Input box */
+    .input-box {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      text-align: center;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+    .input-box::placeholder {
+      color: #bbb;
+    }
+
+    /* Buttons */
+    .btn {
+      padding: 14px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      width: 100%;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 0 20px currentColor;
+    }
+
+    .btn-blue { background: #3b82f6; box-shadow: 0 0 15px #3b82f6; }
+    .btn-green { background: #22c55e; box-shadow: 0 0 15px #22c55e; }
+    .btn-red { background: #ef4444; box-shadow: 0 0 15px #ef4444; }
+
+    /* Parallel button row */
+    .btn-row {
+      display: flex;
+      gap: 12px;
+      margin: 10px 0;
+    }
+    .btn-row .btn {
+      flex: 1;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="game-card">
+    <h1>🎮 Number Guess Game</h1>
+
+    <!-- Input field -->
+    <input type="number" class="input-box" placeholder="Enter your guess">
+
+    <!-- Buttons -->
+    <button class="btn btn-blue">Computer Choice = ***</button>
+    <button class="btn btn-blue">Guess</button>
+
+    <!-- New Game & Reset side by side -->
+    <div class="btn-row">
+      <button class="btn btn-green">New Game</button>
+      <button class="btn btn-red">Reset Game</button>
+    </div>
+
+    <button class="btn btn-blue">Previous Attempt</button>
+    <button class="btn btn-green">Attempt Count</button>
+  </div>
+</body>
+</html>
