@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Number Guess Game</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="game-card">
+  <div class="game-card" id="main">
     <h1>🎮 Number Guess Game</h1>
 
     <!-- Input field -->
-    <input type="number" class="input-box" placeholder="Enter your guess">
+    <input type="text" class="input-box" placeholder="Enter your guess (0-9)">
 
     <!-- Buttons -->
-    <button class="btn btn-blue">Computer Choice = ***</button>
-    <button class="btn btn-blue">Guess</button>
+    <button class="btn btn-blue" id="comp">Computer Choice = ***</button>
+    <button class="btn btn-blue" id="user">Guess</button>
 
     <!-- New Game & Reset side by side -->
     <div class="btn-row">
-      <button class="btn btn-green">New Game</button>
-      <button class="btn btn-red">Reset Game</button>
+      <button class="btn btn-green" id="newGame">New Game</button>
+      <button class="btn btn-red" id="resetGame">Reset Game</button>
     </div>
 
-    <button class="btn btn-blue">Previous Attempt</button>
-    <button class="btn btn-green">Attempt Count</button>
+    <button class="btn btn-blue" id="prvAtmpt">Previous Attempt</button>
+    <button class="btn btn-green" id="atmptCount">Attempt Count</button>
   </div>
-  <div class="game-card hide">
+  <div class="game-card hide" id="Winning">
     <h1>🎮 Number Guess Game</h1>
 
     <!-- Input field -->
     <input type="number" class="input-box" placeholder="Enter your guess">
 
     <!-- Winning msg -->
-      <h1>Congratulation🎉 </h1>
-      <p>You won the Game</p>
+    <h1>Congratulation🎉 </h1>
+    <p>You won the Game</p>
 
     <!-- New Game & Reset side by side -->
     <div class="btn-row">
@@ -42,5 +44,9 @@
       <button class="btn btn-red">Reset Game</button>
     </div>
 
+
+
+    <script src="script.js"></script>
 </body>
+
 </html>
