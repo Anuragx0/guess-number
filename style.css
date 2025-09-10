@@ -57,7 +57,7 @@ body::before {
 
 /* Input box */
 .input-box {
-    width: 100%;
+    width: 50vh;
     padding: 12px;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -159,8 +159,8 @@ body::before {
 body::before {
     content: "";
     position: absolute;
-    top: -50%;
-    left: -50%;
+    top: 50%;
+    left: 50%;
     width: 200%;
     height: 900%;
     background: conic-gradient(from 180deg, #3b82f6, #9333ea, #f43f5e, #3b82f6);
