@@ -14,25 +14,27 @@
 
     <!-- Input field -->
     <input type="text" class="input-box" placeholder="Enter your guess (0-9)">
+    <button class="btn btn-blue" id="user">Guess</button>
 
     <!-- Buttons -->
-    <button class="btn btn-blue" id="comp">Computer Choice = ***</button>
-    <button class="btn btn-blue" id="user">Guess</button>
+    <button class="btn btn-blue" id="comp">Computer Says: [ Too high! / Correct! ]</button>
+    
+
+    <div class="btn btn-blue" id="prvAtmpt">Previous Attempt :</div>
+    <div class="btn btn-green" id="atmptCount">Attempt Count : 5</div>
 
     <!-- New Game & Reset side by side -->
     <div class="btn-row">
       <button class="btn btn-green" id="newGame">New Game</button>
       <button class="btn btn-red" id="resetGame">Reset Game</button>
     </div>
-
-    <button class="btn btn-blue" id="prvAtmpt">Previous Attempt</button>
-    <button class="btn btn-green" id="atmptCount">Attempt Count</button>
   </div>
+<!-- Winning msg -->
   <div class="game-card hide" id="Winning">
     <h1>🎮 Number Guess Game</h1>
 
     <!-- Input field -->
-    <input type="number" class="input-box" placeholder="Enter your guess">
+    <!-- <input type="number" class="input-box" placeholder="Enter your guess"> -->
 
     <!-- Winning msg -->
     <h1>Congratulation🎉 </h1>
@@ -40,10 +42,27 @@
 
     <!-- New Game & Reset side by side -->
     <div class="btn-row">
-      <button class="btn btn-green">New Game</button>
-      <button class="btn btn-red">Reset Game</button>
+      <button class="btn btn-green" id="newGame">New Game</button>
+      <button class="btn btn-red" id="resetGame">Reset Game</button>
     </div>
+  </div>
 
+<!-- Attempt Over -->
+    <div class="game-card hide " id="atmptOver">
+    <h1>🎮 Number Guess Game</h1>
+
+    <!-- Input field -->
+    <!-- <input type="number" class="input-box" placeholder="Enter your guess"> -->
+
+    <!--  msg -->
+    <h1>Attempt Over </h1>
+    <p>You lose the Game</p>
+
+    <!-- New Game & Reset side by side -->
+    <div class="btn-row">
+      <button class="btn btn-green " id="newGame">New Game</button>
+      <button class="btn btn-red" id="resetGame">Reset Game</button>
+    </div>
 
 
     <script src="script.js"></script>

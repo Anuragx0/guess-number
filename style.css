@@ -132,3 +132,10 @@ body::before {
         transform: translateY(0);
     }
 }
+
+#prvAtmpt{
+    width: 50vh;
+}
+#atmptCount{
+    width: 50vh;
+}
